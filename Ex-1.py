@@ -36,7 +36,7 @@ def guessing_game():
     print('Congrats!! You won this game.')
 
 
-# guessing_game()
+guessing_game()
 
 
 DICTIONARY = ['at', 'of', 'am', 'say', 'all']
