@@ -1,0 +1,16 @@
+Strings in Python are the way we work with text. Words, sentences, paragraphs, and
+even entire files are read into and manipulated via strings. Because so much of our
+work revolves around text, it’s no surprise that strings are one of the most common
+data types.
+You should remember two important things about Python strings: (1) they’re
+immutable, and (2) in Python 3, they contain Unicode characters, encoded in
+UTF-8. (See the sidebars on each of these subjects.)
+There’s no such thing as a “character” type in Python. We can talk about a “one
+character string,” but that just means a string whose length is 1.
+Python’s strings are interesting and useful, not only because they allow us to
+work with text, but also because they’re a Python sequence. This means that we can
+iterate over them (character by character), retrieve their elements via numeric
+indexes, and search in them with the in operator.
+This chapter includes exercises designed to help you work with strings in a variety
+of ways. The more familiar you are with Python’s string manipulation techniques,
+the easier it will be to work with text.
