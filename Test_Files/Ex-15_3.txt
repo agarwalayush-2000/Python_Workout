@@ -1,0 +1,21 @@
+Knowing how to work with dicts is crucial to your Python career. Moreover, once your
+learn how to use dict.get effectively, you’ll find that your code is shorter, more elegant, and more maintainable.
+ Write a function, dictdiff, that takes two dicts as arguments. The function returns
+a new dict that expresses the difference between the two dicts.
+
+If there are no differences between the dicts, dictdiff returns an empty dict. For
+each key-value pair that differs, the return value of dictdiff will have a key-value pair
+in which the value is a list containing the values from the two different dicts. If one of
+the dicts doesn’t contain that key, it should contain None.
+This all sounds good, but there’s a problem with this approach: it means that we’re
+going through each of the keys in first and then each of the keys in second. Given that
+at least some keys will hopefully overlap, this sounds like an inefficient approach. It
+would be better and smarter for us to collect all of the keys from first and second, put
+them into a set (thus ensuring that each appears only once), and then iterate over them.
+
+Because a set is effectively a dict without values, we know for sure that by putting these
+lists into our all_keys set, we’ll only pass through each key once. Rather than checking whether a key exists in each dict, and then retrieving its value, and then checking
+whether the values are the same, I used the dict.get (http://mng.bz/4AeV) method.
+This saves us from getting a KeyError exception. Moreover, if one of the dicts lacks
+the key in question, we get None back. We can use that not only to check whether the
+dicts are the same, but also to retrieve the values.
